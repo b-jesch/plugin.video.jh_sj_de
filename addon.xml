@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.jh_sj_de" version="1.1.0+matrix" name="Serienplaner" provider-name="TehTux, PvD (Matrix)">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.22.0+matrix.1"/>
+        <import addon="script.module.beautifulsoup4" version="4.9.3+matrix.1"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="de">Serienplaner - Deutschland</summary>
+        <summary lang="en">Serienplaner - Deutschland</summary>
+        <description lang="de">Dieses Plugin - genannt Serienplaner - soll Dir helfen, den Überblick über die Neustarts von Fernsehserien, die Serienjunkies im Programm hat, nicht zu verlieren.</description>
+        <description lang="en">This plugin - called a series planner - is intended to help you keep track of the new TV series that Serienjunkies has listed on their web site.</description>
+        <disclaimer lang="de">Dies ist ein vom Portal nicht unterstütztes, inoffizielles Plugin für den Serienplaner von www.serienjunkies.de</disclaimer>
+        <disclaimer lang="en">This is an unofficial plugin for the series planner from www.serienjunkies.de that is not supported by the portal.</disclaimer>
+        <language>en de</language>
+        <platform>all</platform>
+        <license>GPL-2.0-only</license>
+        <assets>
+            <icon>resources/icon.png</icon>
+        </assets>
+    </extension>
+</addon>

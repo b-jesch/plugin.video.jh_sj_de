@@ -1,0 +1,63 @@
+# XBMC Media Center language file
+# Addon Name: Serienplaner
+# Addon id: service.sleepy.watchdog
+# Addon version: 1.1.0+matrix
+# Addon Provider: TehTux, PvD
+
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC-Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: 2015-09-29 07:42+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgctxt "#32105"
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgctxt "#32106"
+msgid "Do not show these streaming services"
+msgstr "Folgende Streaming Dienste nicht anzeigen"
+
+msgctxt "#32110"
+msgid "Amazon Prime Video"
+msgstr "Amazon Prime Video"
+
+msgctxt "#32111"
+msgid "Netflix"
+msgstr "Netflix"
+
+msgctxt "#32112"
+msgid "Disney+"
+msgstr "Disney+"
+
+msgctxt "#32113"
+msgid "Joyn"
+msgstr "Joyn"
+
+msgctxt "#32114"
+msgid "Joyn Primetime"
+msgstr "Joyn Primetime"
+
+msgctxt "#32115"
+msgid "Apple TV+"
+msgstr "Apple TV+"
+
+msgctxt "#32116"
+msgid "Now!"
+msgstr "Now!"
+
+msgctxt "#32117"
+msgid "Starzplay"
+msgstr "Starzplay"
+
+msgctxt "#32118"
+msgid "MagentaTV"
+msgstr "MagentaTV"

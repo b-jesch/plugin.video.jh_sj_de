@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings>
+    <category label="32105">
+        <setting id="services" type="lsep" label="32106" />
+        <setting id="amazon" type="bool" label="32110" default="false" />
+        <setting id="netflix" type="bool" label="32111" default="false" />
+        <setting id="disney" type="bool" label="32112" default="false" />
+        <setting id="joyn" type="bool" label="32113" default="false" />
+        <setting id="joyn_primetime" type="bool" label="32114" default="false" />
+        <setting id="appletv" type="bool" label="32115" default="false" />
+        <setting id="now" type="bool" label="32116" default="false" />
+        <setting id="starzplay" type="bool" label="32117" default="false" />
+        <setting id="magentatv" type="bool" label="32118" default="false" />
+    </category>
+</settings>
