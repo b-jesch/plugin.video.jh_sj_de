@@ -73,8 +73,7 @@ def list_tv_shows():
             tv_show_id = element.find_all("a")[0].get("href").split("/")[1]
             art = check_resource("https://s-cdn.serienjunkies.de/n/" + tv_show_id + ".jpg")
             list_item.setArt({
-                'poster': art,
-                'fanart': art
+                'poster': art, 'icon': art, 'thumb': art, 'fanart': art
             })
             appointment = element.find_all("div")[1].find_all("div")[1].text
             print(appointment)
