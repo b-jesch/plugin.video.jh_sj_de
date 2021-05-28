@@ -18,6 +18,7 @@
         <language>en de</language>
         <platform>all</platform>
         <license>GPL-2.0-only</license>
+        <source>https://github.com/b-jesch/plugin.video.jh_sj_de</source>
         <assets>
             <icon>resources/icon.png</icon>
         </assets>
