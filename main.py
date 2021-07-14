@@ -76,7 +76,6 @@ def list_tv_shows():
                 'poster': art, 'icon': art, 'thumb': art, 'fanart': art
             })
             appointment = element.find_all("div")[1].find_all("div")[1].text
-            print(appointment)
             plot = transmitter + ": " + appointment
             list_item.setInfo('video', {'plot': plot})
             list_item.setProperty('IsPlayable', 'false')
