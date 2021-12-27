@@ -18,6 +18,10 @@ msgstr ""
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
+msgctxt "#32104"
+msgid "Extended Info (Embuary Info)"
+msgstr "Weitere Infos (Embuary Info)"
+
 msgctxt "#32105"
 msgid "Settings"
 msgstr "Einstellungen"

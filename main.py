@@ -58,7 +58,7 @@ def list_tv_shows():
     xbmcplugin.setContent(HANDLE, 'videos')
 
     response = requests.get("https://www.serienjunkies.de/docs/serienplaner.html")
-    soup = BeautifulSoup(response.text, "html.parser")
+    soup = BeautifulSoup(response.text.encode(response.encoding), "html.parser")
     elements = soup.find_all("div", class_="tablerow")
     xbmc.log('{} items found'.format(len(elements)), xbmc.LOGDEBUG)
     for element in elements:
@@ -79,6 +79,10 @@ def list_tv_shows():
             plot = transmitter + ": " + appointment
             list_item.setInfo('video', {'plot': plot})
             list_item.setProperty('IsPlayable', 'false')
+            if xbmc.getCondVisibility('System.AddonIsEnabled(script.embuary.info)'):
+                title = label.split('Staffel')[0].strip()
+                list_item.addContextMenuItems([('Embuary Info',
+                                                'RunScript(script.embuary.info,call=tv,query=%s)' % title)])
             xbmcplugin.addDirectoryItem(
                 HANDLE,
                 get_url(action='show_tv_show_info', header=label, message=plot), list_item, False
