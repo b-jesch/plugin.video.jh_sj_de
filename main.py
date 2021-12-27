@@ -81,7 +81,7 @@ def list_tv_shows():
             list_item.setProperty('IsPlayable', 'false')
             if xbmc.getCondVisibility('System.AddonIsEnabled(script.embuary.info)'):
                 title = label.split('Staffel')[0].strip()
-                list_item.addContextMenuItems([('Embuary Info',
+                list_item.addContextMenuItems([(LOC(32104),
                                                 'RunScript(script.embuary.info,call=tv,query=%s)' % title)])
             xbmcplugin.addDirectoryItem(
                 HANDLE,
