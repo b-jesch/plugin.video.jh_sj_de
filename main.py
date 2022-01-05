@@ -63,7 +63,7 @@ def list_tv_shows():
     xbmc.log('{} items found'.format(len(elements)), xbmc.LOGDEBUG)
     for element in elements:
         try:
-            label = element.find_all("a")[0].text
+            label = element.find_all("a")[0].text.encode(response.encoding).decode('utf-8')
             transmitter = element.find_all("a")[-1].get("title")
             if not transmitter:
                 transmitter = element.find_all("img")[-1].get("title")
