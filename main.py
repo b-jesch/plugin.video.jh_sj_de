@@ -64,7 +64,7 @@ def list_tv_shows():
     for element in elements:
         try:
             label = element.find_all("a")[0].text.encode(response.encoding).decode('utf-8')
-        except UnicodeEncodeError:
+        except (UnicodeEncodeError, UnicodeDecodeError):
             label = element.find_all("a")[0].text.encode('utf-8').decode()
         try:
             transmitter = element.find_all("a")[-1].get("title")
