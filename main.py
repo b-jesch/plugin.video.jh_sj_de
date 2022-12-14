@@ -59,13 +59,16 @@ def list_tv_shows():
 
     response = requests.get("https://www.serienjunkies.de/docs/serienplaner.html")
     soup = BeautifulSoup(response.text.encode(response.encoding), "html.parser")
-    elements = soup.find_all("div", class_="tablerow")
+    elements = soup.find_all("div", class_="tablerow height100 topabstandmini")
     xbmc.log('{} items found'.format(len(elements)), xbmc.LOGDEBUG)
     for element in elements:
         try:
             label = element.find_all("a")[0].text.encode(response.encoding).decode('utf-8')
         except (UnicodeEncodeError, UnicodeDecodeError):
             label = element.find_all("a")[0].text.encode('utf-8').decode()
+        label = label.strip()
+        if label == "":
+            label = "Serienplaner"
         try:
             transmitter = element.find_all("a")[-1].get("title")
             if not transmitter:
@@ -74,11 +77,12 @@ def list_tv_shows():
                 continue
             list_item = xbmcgui.ListItem(label=label)
             tv_show_id = element.find_all("a")[0].get("href").split("/")[1]
-            art = check_resource("https://s-cdn.serienjunkies.de/n/" + tv_show_id + ".jpg")
+            art = check_resource("https://s-cdn-sj.eu-central-1.linodeobjects.com/n/" + tv_show_id + ".webp")
             list_item.setArt({
                 'poster': art, 'icon': art, 'thumb': art, 'fanart': art, 'landscape': art
             })
-            appointment = element.find_all("div")[1].find_all("div")[1].text
+            appointment = element.find_all("div")[1].find_all("div")[0].text
+            appointment = " ".join(appointment.split())
             plot = transmitter + ": " + appointment
             list_item.setInfo('video', {'plot': plot})
             list_item.setProperty('IsPlayable', 'false')
